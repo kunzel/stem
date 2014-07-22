@@ -1,0 +1,19 @@
+$def with (stamped_scans)
+
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="static/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="static/bootstrap.min.js"></script>
+
+    
+<div class="container">    
+        
+    <a href="/">Back to Control Centre</a>
+        
+    <h3>Existing Maps</h3>
+    <p>Click a timestamp to show that map in RViz. This may take some time.</p>
+    <ul>
+    $for scan in stamped_scans:
+        <li><a href="publish_scan/$scan[2]">$scan[1]</a> - $scan[2] </li>
+    </ul>    
+</div>
